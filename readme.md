@@ -1,6 +1,7 @@
 #P5: Linux Server Configuration
 
 Server IP address: 52.37.130.118
+
 SSH Port: 2200
 
 ## Quick Start
@@ -14,7 +15,9 @@ New user "grader" created
 `adduser grader`
 
 Grader given sudo access
+
 Disabled root user login
+
 Enforced key-based SSH authentication (see authentication section for SSH private keys)
 
 Changed SSH port from 22 to 2200
