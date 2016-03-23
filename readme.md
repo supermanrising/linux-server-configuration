@@ -14,6 +14,8 @@ New user "grader" created
 
 `adduser grader`
 
+grader password is `!@gr8de!&this`
+
 Grader given sudo access
 
 Disabled root user login
@@ -133,6 +135,44 @@ sudo nano flaskapp.wsgi
 Restarted apache
 
 `sudo service apache2 restart`
+
+### FOR EXTRA CREDIT
+
+#### Monitoring application
+
+Installed glances to monitor system status
+
+`pip install glances`
+
+#### Ban attackers
+
+Installed fail2ban
+
+'sudo apt-get install fail2ban'
+
+Copied jail.conf
+
+`sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`
+
+Updated jail.local file to temporarily ban ssh after 3 failed login attempts
+
+'sudo nano /etc/fail2ban/jail.local’
+
+Initialized fail2ban
+
+'sudo service fail2ban start'
+
+#### Automatic Package Updates
+
+Installed unattended-upgrades
+
+'sudo apt-get install unattended-upgrades’
+
+Configured unattended updates to automatically update and install new packages every day
+
+’sudo nano /etc/apt/apt.conf.d/50unattended-upgrades’
+'sudo nano /etc/apt/apt.conf.d/10periodic’
+'sudo nano /etc/apt/apt.conf.d/20auto-upgrades'
 
 ## Authentication
 
